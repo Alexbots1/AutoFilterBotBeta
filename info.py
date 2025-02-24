@@ -46,7 +46,7 @@ else:
     ADMINS = [int(admins) for admins in ADMINS.split()]
 
 # Channels
-INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '').split()]
+INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '0').split()]
 if len(INDEX_CHANNELS) == 0:
     print('Info - INDEX_CHANNELS is empty')
 LOG_CHANNEL = environ.get('LOG_CHANNEL', '')
@@ -55,12 +55,12 @@ if len(LOG_CHANNEL) == 0:
     exit()
 else:
     LOG_CHANNEL = int(LOG_CHANNEL)
-FORCE_SUB_CHANNELS = [int(fsub_channels) if fsub_channels.startswith("-") else fsub_channels for fsub_channels in environ.get('FORCE_SUB_CHANNELS', '').split()]
+FORCE_SUB_CHANNELS = [int(fsub_channels) if fsub_channels.startswith("-") else fsub_channels for fsub_channels in environ.get('FORCE_SUB_CHANNELS', '0').split()]
 if len(FORCE_SUB_CHANNELS) == 0:
     print('Info - FORCE_SUB_CHANNELS is empty')
     
 # support group
-SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '')
+SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '0')
 if len(SUPPORT_GROUP) == 0:
     print('Error - SUPPORT_GROUP is missing, exiting now')
     exit()
@@ -116,7 +116,7 @@ IS_PREMIUM = is_enabled('IS_PREMIUM', True)
 PAYMENT_QR = environ.get('PAYMENT_QR', '')
 if len(PAYMENT_QR) == 0:
     print('Info - PAYMENT_QR is empty')
-OWNER_UPI_ID = environ.get('OWNER_UPI_ID', '')  #if you not have UPI, then use another method
+OWNER_UPI_ID = environ.get('OWNER_UPI_ID', '0')  #if you not have UPI, then use another method
 if len(OWNER_UPI_ID) == 0:
     print('Info - OWNER_UPI_ID is empty')
 if len(PAYMENT_QR) == 0 or len(OWNER_UPI_ID) == 0:
@@ -124,7 +124,7 @@ if len(PAYMENT_QR) == 0 or len(OWNER_UPI_ID) == 0:
     IS_PREMIUM = False
 
 # for stream
-IS_STREAM = is_enabled('IS_STREAM', True)
+IS_STREAM = is_enabled('IS_STREAM', False)
 BIN_CHANNEL = environ.get("BIN_CHANNEL", "")
 if len(BIN_CHANNEL) == 0:
     print('Error - BIN_CHANNEL is missing, exiting now')
