@@ -38,7 +38,7 @@ PORT = int(environ.get('PORT', '80'))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/58fef5cb458d5b29b0186.jpg https://telegra.ph/file/f0aa4f433132769f8970c.jpg https://telegra.ph/file/f515fbc2084592eca60a5.jpg https://telegra.ph/file/20dbdcffaa89bd3d09a74.jpg https://telegra.ph/file/6045ba953af4def846238.jpg')).split()
 
 # Bot Admins
-ADMINS = environ.get('ADMINS', '')
+ADMINS = environ.get('ADMINS', '1669823187')
 if len(ADMINS) == 0:
     print('Error - ADMINS is missing, exiting now')
     exit()
@@ -77,7 +77,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
 
 # Links
 SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/HA_Bots_Support')
-OWNER_USERNAME = environ.get("OWNER_USERNAME", "https://t.me/Hansaka_Anuhas")
+OWNER_USERNAME = environ.get("OWNER_USERNAME", "https://t.me/MsTgbotz")
 UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/HA_Bots')
 FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/HA_Films_World')
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/HA_Bots")
