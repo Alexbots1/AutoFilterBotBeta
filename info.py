@@ -125,13 +125,13 @@ if len(PAYMENT_QR) == 0 or len(OWNER_UPI_ID) == 0:
 
 # for stream
 IS_STREAM = is_enabled('IS_STREAM', False)
-BIN_CHANNEL = environ.get("BIN_CHANNEL", "")
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1001652930951")
 if len(BIN_CHANNEL) == 0:
     print('Error - BIN_CHANNEL is missing, exiting now')
     exit()
 else:
     BIN_CHANNEL = int(BIN_CHANNEL)
-URL = environ.get("URL", "")
+URL = environ.get("URL", "https://unaware-jacintha-gogoot1996-24fa094d.koyeb.app/")
 if len(URL) == 0:
     print('Error - URL is missing, exiting now')
     exit()
