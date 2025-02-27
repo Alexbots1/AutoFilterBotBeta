@@ -1,5 +1,5 @@
 from info import ADMINS
-from speedtest import Speedtest, ConfigRetrievalError
+#from speedtest import Speedtest, ConfigRetrievalError
 from pyrogram import Client, filters, enums
 from utils import get_size
 from datetime import datetime
